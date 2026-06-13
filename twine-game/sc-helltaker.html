@@ -104,28 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="sc-helltaker" startnode="25" creator="Twine" creator-version="2.12.0" format="SugarCube" format-version="2.37.3" ifid="E2E88911-641D-42AF-84F6-3DF3243D4456" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* 全局游戏背景 */
-body {
-  background: url("bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  background-color: #000;
-  color: #fff;
-}
-
-/* 对话段落容器，加半透明背景让文字更清晰 */
-.passage {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 1.5em;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 2em auto;
-}
-
-/* 封面段落特殊处理，去掉半透明背景 */
-.passage[data-tags~="cover"] {
-  background-color: transparent;
-}
-#story-data {
+	<tw-storydata name="sc-helltaker" startnode="25" creator="Twine" creator-version="2.12.0" format="SugarCube" format-version="2.37.3" ifid="E2E88911-641D-42AF-84F6-3DF3243D4456" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#story-data {
   position: fixed;
   bottom: 10px;
   left: 50%;
@@ -343,19 +322,19 @@ button {
 看完后，你躺到床上，陷入了睡眠。
 &lt;&lt;button &quot;睡觉&quot;&gt;&gt;&lt;&lt;goto &quot;Diamond&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Title" tags="" position="75,0" size="100,100">::passage {
   background: #000;
-  color: #fff;
   text-align: center;
-  padding-top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
-/* 游戏封面图 */
-&lt;img src=&quot;ml.jpg&quot; style=&quot;max-width: 80%; max-height: 60vh; margin: 0 auto; display: block;&quot;&gt;
+&lt;img src=&quot;ml.jpg&quot; style=&quot;max-width: 80%; max-height: 70vh; display: block; border-radius: 12px; box-shadow: 0 0 20px rgba(255,0,0,0.3);&quot;&gt;
 
-&lt;div style=&quot;margin-top: 2em;&quot;&gt;
-  &lt;h1&gt;SC组 把妹王&lt;/h1&gt;
-  &lt;p&gt;一款互动同人作品&lt;/p&gt;
-  &lt;&lt;button &quot;点击开始&quot;&gt;&gt;&lt;&lt;goto &quot;Start&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="StoryData" tags="" position="125,1150" size="100,100">&lt;&lt;button &quot;存档&quot; class=&quot;save-btn&quot;&gt;&gt;&lt;&lt;Save&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;开始&quot; `style=&quot;position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); padding: 1em 3em; background: rgba(211,47,47,0.8); color: white; border: none; border-radius: 4px; font-size: 1.1em;&quot;&gt;&gt;
+  &lt;&lt;goto &quot;开始游戏&quot;&gt;&gt;
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="StoryData" tags="" position="125,1150" size="100,100">&lt;&lt;button &quot;存档&quot; class=&quot;save-btn&quot;&gt;&gt;&lt;&lt;Save&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;button &quot;读档&quot; class=&quot;save-btn&quot;&gt;&gt;&lt;&lt;Load&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;button &quot;重新开始&quot; class=&quot;save-btn&quot;&gt;&gt;
   &lt;&lt;if &lt;&lt;confirm &quot;确定重新开始？进度将清空！&quot;&gt;&gt;&gt;&gt;
@@ -416,7 +395,7 @@ button {
     &lt;&lt;button &quot;......&quot;&gt;&gt;&lt;&lt;goto &quot;Rest&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Start" tags="" position="100,75" size="100,100">你只是一个喜欢看DMXX同人的普通人，这天像往常一样，在看手书
 
-
+// 立绘加自适应容器，避免超出屏幕
 &lt;div style=&quot;max-width: 300px; margin: 1em auto;&quot;&gt;
   &lt;img src=&quot;ml.jpg&quot; style=&quot;max-width: 100%; height: auto; display: block;&quot;&gt;
 &lt;/div&gt;
