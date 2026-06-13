@@ -1,5 +1,5 @@
 :: StoryTitle
-SC-Helltaker-01
+sc-helltaker
 
 
 :: StoryData
@@ -7,7 +7,11 @@ SC-Helltaker-01
   "ifid": "E2E88911-641D-42AF-84F6-3DF3243D4456",
   "format": "SugarCube",
   "format-version": "2.37.3",
-  "start": "Start",
+  "start": "Title",
+  "tag-colors": {
+    "cover": "blue",
+    "ccover": "purple"
+  },
   "zoom": 1
 }
 
@@ -18,7 +22,7 @@ SC-Helltaker-01
 <<button "这是一个梗">><<goto "Funny">><</button>>
 
 
-:: Addin_Success {"position":"275,450","size":"100,100"}
+:: Addin_Success {"position":"275,475","size":"100,100"}
 你笑起来，他没说话，你只好继续笑。气氛有些怪。
 “等等，你也是来打BOSS的。”原来他刚才是在思考。
 “我需要帮助。”你说。随后只见他友善的抬头说道：“威利。”
@@ -71,7 +75,7 @@ SC-Helltaker-01
 <<button "死吧？">><<goto "Die">><</button>>
 
 
-:: Funny {"position":"200,450","size":"100,100"}
+:: Funny {"position":"200,475","size":"100,100"}
 “哦什么意思”魏彬咪起眼睛，盯着你。
 你胡诌，说这是你们族人打招呼的方式。
 “所以我是谁？”
@@ -105,6 +109,25 @@ SC-Helltaker-01
 “总之先去打”他们都看过去“...去黑夜的宫殿”一旁的程序说到，威廉听的打了个寒噤。
 “对啊，黑夜酱的房子里什么都有，有还有好多甜品🧁”“等等，也就是那里有道具”威廉问道，声音发虚。“有吧，反正连最难买的千层榴莲塔都有”琼斯说道
 <<button "还有">><<goto "Purpose">><</button>>
+
+
+:: Notice [cover] {"position":"150,0","size":"100,100"}
+<h2 style="font-size: 2.4em; margin: 0 0 1em 0; color: #fff;">游戏说明</h2>
+
+<div style="max-width: 700px; margin: 0 auto; font-size: 0.95em; line-height: 1.8; color: #ddd; text-align: left;">
+<p>1. 本作品为《Helltaker》同人互动小游戏，<strong>纯非商用，仅供娱乐交流</strong>。</p>
+
+<p>2. 🎵 音乐建议：推荐手动播放《Helltaker》官方原声，提升游玩体验。</p>
+
+<p>3. 素材说明：部分角色图片为本人手绘创作；另一部分角色图使用捏咔模板制作，模板版权归原作者所有。</p>
+
+<p>4. 原作IP、音乐及相关版权均归属官方与原作者，本作品仅做同人分享，无意侵权。如有问题请联系处理。</p>
+</div>
+
+<div style="margin-top: 3em;">
+<<button "开始游玩">><<goto "Start">><</button>>
+<<button "返回封面">><<goto "Title">><</button>>
+</div>
 
 
 :: Ok {"position":"0,350","size":"100,100"}
@@ -161,7 +184,7 @@ SC-Helltaker-01
 <<button "后宫">><<goto "Harem">><</button>>
 
 
-:: Red {"position":"150,150","size":"100,100"}
+:: Red {"position":"150,75","size":"100,100"}
 眼前是一片令人作呕的红色，缠缠绕绕的枯萎一般的黑色物质，树木般的外形。
 “这里是哪里”无人回应，你感觉有点绝望，即使你在做梦，这恐怖的场景也不会散去。
 穿越？只是睡个觉不要这么夸张吧。
@@ -219,9 +242,13 @@ SC-Helltaker-01
 <<button "睡觉">><<goto "Diamond">><</button>>
 
 
-:: Start {"position":"75,75","size":"100,100"}
+:: Start {"position":"100,75","size":"100,100"}
 你只是一个喜欢看DMXX同人的普通人，这天像往常一样，在看手书
-<img src="ml.jpg" style="max-width:100%; height:auto;">
+
+<div style="max-width: 300px; margin: 1em auto;">
+  <img src="ml.jpg" style="max-width: 100%; height: auto; display: block;">
+</div>
+
 <<button "继续">><<goto "Sleep">><</button>>
 
 
@@ -298,6 +325,15 @@ SC-Helltaker-01
 <<goto "Sel2">>
 
 
+:: Title [cover] {"position":"75,0","size":"100,100"}
+<img src="fm.jpg" style="max-width: 80%; max-height: 70vh; display: block; border-radius: 12px;">
+
+<h1 style="font-size: 2.2em; margin: 1.5em 0 0.3em 0;">SC Helltaker</h1>
+<p style="font-size: 1em; opacity: 0.7; margin: 0 0 2em 0;">一款同人互动游戏</p>
+<<button "点击开始">><<goto "Start">><</button>>
+<<button "游戏说明">><<goto "Notice">><</button>>
+
+
 :: Trace on {"position":"125,775","size":"100,100"}
 “什么，我怎么无法攻击”“塔罗牌们被恋人Trace on了”“哈？什么恋人，你得病了？”“恋人牌的作用呢”“你你你不讲捂得”“不是我了，是他...”
 “根据牌规，一个人只能使用一张牌的能力”“嗯~”“所以就只能你这个可恶魔法师耍手段了吧？”“诶诶，怎么可能，”“不要歧视魔术师啊”“有本事就公正对决吧”
@@ -326,11 +362,11 @@ SC-Helltaker-01
 <<button "继续">><<goto "Sel2">><</button>>
 
 
-:: 未命名片段 {"position":"250,1150","size":"100,100"}
+:: 未命名片段 1 {"position":"125,1425","size":"100,100"}
 
 
 
-:: 未命名片段 2 {"position":"250,1275","size":"100,100"}
+:: 未命名片段 2 {"position":"250,1325","size":"100,100"}
 “很好，很好。”他神色勉强。
 “我还有很多工作要做，不要妨碍我。”
 说着想把你推开，随即又愣了愣：“麻烦了。”
@@ -344,7 +380,44 @@ SC-Helltaker-01
 <</link>>
 
 
+:: 未命名片段 3 {"position":"0,1425","size":"100,100"}
+
+
+
 :: StoryStylesheet [stylesheet]
+.cover {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+/* 全局游戏背景 */
+body {
+  background: url("bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000;
+  color: #fff;
+}
+
+/* 对话段落容器，加半透明背景让文字更清晰 */
+.passage {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1.5em;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+/* 封面段落特殊处理，去掉半透明背景 */
+.passage[data-tags~="cover"] {
+  background-color: transparent;
+}
 #story-data {
   position: fixed;
   bottom: 10px;
